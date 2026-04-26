@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - NNM Tech Solutions</title>
+    <meta name="description" content="Submit your application for the Remote Data Entry job.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page-wrapper">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NNM Tech<span>Solutions</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apply.html" class="btn-nav active">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h1>Join Our Team</h1>
+                <p>Fill out the form below to apply for the Data Entry Specialist position.</p>
+            </div>
+            
+            <form id="applicationForm" novalidate>
+                <div class="form-group" id="group-name">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" id="fullName" class="form-input" placeholder="e.g. Jane Doe">
+                    <span class="error-msg">Please enter your full name.</span>
+                </div>
+
+                <div class="form-group" id="group-email">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="e.g. jane@example.com">
+                    <span class="error-msg">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group" id="group-phone">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="e.g. +1 (555) 000-0000">
+                    <span class="error-msg">Please enter a valid phone number.</span>
+                </div>
+
+                <div class="form-group" id="group-experience">
+                    <label for="experience" class="form-label">Previous Experience</label>
+                    <textarea id="experience" class="form-input" placeholder="Briefly describe your relevant data entry experience..."></textarea>
+                    <span class="error-msg">Please provide your previous experience.</span>
+                </div>
+
+                <button type="submit" class="btn-primary btn-submit">Submit Application</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="container">
+            <div class="footer-top">
+                <a href="index.html" class="logo">NNM Tech<span style="color: var(--accent);">Solutions</span></a>
+                <p class="footer-text">Empowering businesses globally with accurate data processing, unmatched efficiency, and secure workflows.</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NNM Tech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

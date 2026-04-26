@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Successful - NNM Tech Solutions</title>
+    <meta name="description" content="Your application has been successfully submitted.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="success-page-wrapper">
+    <nav class="navbar" style="position: absolute; width: 100%;">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NNM Tech<span>Solutions</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="apply.html" class="btn-nav">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="success-content" style="max-width: 600px; padding: 3rem 2rem;">
+        <div class="success-icon" style="margin-bottom: 1.5rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h1 style="font-size: 1.75rem;">Application Saved!</h1>
+        <p style="margin-bottom: 1.5rem;">Your details have been recorded. To finalize your application for the <strong>Remote Data Entry Job</strong>, please complete the registration fee payment.</p>
+        
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 2rem; margin-bottom: 2rem;">
+            <h2 style="font-size: 1.25rem; color: var(--primary); margin-bottom: 0.5rem;">Scan to Pay Form Fee</h2>
+            <p style="font-size: 1.5rem; font-weight: 800; color: var(--secondary); margin-bottom: 1.5rem;">₹90</p>
+            
+            <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+                <div style="background: white; padding: 1rem; border-radius: 0.5rem; border: 2px dashed #cbd5e1; display: inline-block;">
+                    <img src="qr-code.jpg" alt="Payment QR Code" style="width: 200px; height: 200px; object-fit: contain;">
+                </div>
+            </div>
+            <p style="font-weight: 700; color: var(--primary); font-size: 1.1rem; margin-bottom: 0.25rem;">Aaditya</p>
+            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0;">Scan using any UPI App (GPay, PhonePe, Paytm)</p>
+        </div>
+
+        <form id="paymentForm" class="form-wrapper" style="margin: 0; padding: 2rem; box-shadow: none; border: 1px solid var(--border);">
+            <div class="form-group" style="text-align: left;">
+                <label for="paymentScreenshot" class="form-label">Upload Payment Screenshot (₹90)</label>
+                <input type="file" id="paymentScreenshot" class="form-input" accept="image/*" required style="padding: 0.75rem;">
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">Please upload the screenshot confirming your payment of ₹90.</p>
+            </div>
+            <button type="submit" class="btn-primary btn-submit">Submit Payment</button>
+        </form>
+
+        <div style="margin-top: 1.5rem; display: none;" id="finalStepContainer">
+            <p style="color: var(--success); font-weight: 600; margin-bottom: 1rem;">Payment Screenshot Uploaded Successfully!</p>
+            <p style="margin-bottom: 1rem;">Please complete the final mandatory step by filling out the form below.</p>
+            <a href="https://forms.gle/GN7mBXgoJHKWMVLx8" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 0.8rem 2rem; margin-bottom: 1rem; display: inline-block;">Complete Final Step</a>
+        </div>
+
+        <br>
+        <a href="index.html" style="color: var(--text-light); text-decoration: underline; font-size: 0.9rem; margin-top: 1.5rem; display: inline-block;">Return to Home</a>
+    </main>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('finalStepContainer').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
